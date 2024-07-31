@@ -108,13 +108,6 @@ void loop() {
     // Bluetoothデータ送信
     SerialBT.print(data + "\r"); // 区切り文字「CR」をつけてスレーブ側へ送信
   }
-  // LED点灯処理
-  if (data == "A ON!") {      // 受信データが「A ON!」なら
-    digitalWrite(10, LOW);    // 本体LED点灯
-  }
-  if (data == "B ON!") {      // 受信データが「B ON!」なら
-    digitalWrite(10, HIGH);   // 本体LED消灯
-  }
   restart();  // 再起動（リスタート）処理
   delay(20);  // 20ms遅延時間
 }
